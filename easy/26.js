@@ -1,15 +1,8 @@
-// function removeDuplicates(nums){
-// 	let len = nums.length
-// 	for(let i=len-1;i>0;i--){
-// 		if(nums[i] === nums[i-1]){
-// 			nums.splice(i, 1)
-// 			len--
-// 		}
-// 	}
-// 	return len
-// }
-
-function removeDuplicates(nums) {
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var removeDuplicates = function(nums) {
   let si = 0
   let len = nums.length
   for (let i = 0; i < len; i++) {
