@@ -2,6 +2,14 @@
  * @param {number} n
  * @return {number}
  */
+
+//  O(lgn)
+var lastRemaining = function(n) {
+  if (n < 4) return n === 1 ? 1 : 2
+  return lastRemaining(Math.floor(n / 4)) * 4 - (n % 4 < 2 ? 2 : 0)
+}
+
+/*  O(n)
 var lastRemaining = function(n) {
   let a = []
   for (let i = 0; i < n; i++) {
@@ -24,6 +32,7 @@ var lastRemaining = function(n) {
   }
   return a[0]
 }
+*/
 
 // test
 console.log(lastRemaining(10000000))
